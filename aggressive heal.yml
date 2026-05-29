@@ -1,0 +1,20 @@
+info:
+  name: aggressive heal
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/geo/api/cases/testing/stl/cavity.stl/fix/aggressive-heal
+  body:
+    type: json
+    data: '{"max_hole_size_percent": 10, "force_watertight": true, "save_result": true}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

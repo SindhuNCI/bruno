@@ -1,0 +1,20 @@
+info:
+  name: step accuracy
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/geo/step_factor_accuracy/testing/gearbox.stp
+  body:
+    type: json
+    data: '{"factor": 0.5}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

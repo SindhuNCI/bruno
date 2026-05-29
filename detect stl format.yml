@@ -1,0 +1,17 @@
+info:
+  name: detect stl format
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/geo/files/detect-stl-format/testing/cavity.stl
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

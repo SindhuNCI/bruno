@@ -1,0 +1,17 @@
+info:
+  name: ascii to binary stagging
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100//geo/ascii_to_binary_staging/testing/cavity.stl
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

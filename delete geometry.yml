@@ -1,0 +1,20 @@
+info:
+  name: delete geometry
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/geo/delete-geometry/demonf
+  body:
+    type: json
+    data: '{"deleteGeometryName": ["demonf.stl"]}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

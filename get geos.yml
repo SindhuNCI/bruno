@@ -1,0 +1,17 @@
+info:
+  name: get geos
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: http://127.0.0.1:5100/geo/get/geos/testing
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

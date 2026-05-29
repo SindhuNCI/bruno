@@ -1,0 +1,24 @@
+info:
+  name: upload staging
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/geo/upload/staging/testing
+  body:
+    type: multipart-form
+    data:
+      - name: files
+        type: file
+        value:
+          - C:\Novacast Systems\NFS_6.5r4_demo\3DFiles\3DFiles\CAVITY.stl
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

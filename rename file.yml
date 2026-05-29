@@ -1,0 +1,20 @@
+info:
+  name: rename file
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/geo/rename-file/testing
+  body:
+    type: json
+    data: '{"old_filename": "cavity.stl", "new_filename": "demo_renamed.stl"}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

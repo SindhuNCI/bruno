@@ -1,0 +1,17 @@
+info:
+  name: get mesh analysis report
+  type: http
+  seq: 22
+
+http:
+  method: GET
+  url: http://127.0.0.1:5100/geo/api/cases/testing/stl/cavity.stl/analysis/{{task_id}}/result
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

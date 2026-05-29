@@ -1,0 +1,17 @@
+info:
+  name: analyze dimensions
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: http://127.0.0.1:5100/geo/analyze-dimensions/testing/cavity.stl
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

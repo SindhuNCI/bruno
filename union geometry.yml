@@ -1,0 +1,20 @@
+info:
+  name: union geometry
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/geo/union-geometry/demonf
+  body:
+    type: json
+    data: '{"source": "demons98.stl", "target": "demonf.stl", "output": "union_out.stl"}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

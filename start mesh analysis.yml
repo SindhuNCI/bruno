@@ -1,0 +1,24 @@
+info:
+  name: start mesh analysis
+  type: http
+  seq: 20
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/geo/api/cases/testing/stl/cavity.stl/analyze
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const data = res.getBody();
+        bru.setVar("task_id", data.task_id);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

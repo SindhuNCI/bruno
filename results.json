@@ -1,0 +1,381 @@
+[
+  {
+    "iterationIndex": 0,
+    "results": [
+      {
+        "test": {
+          "filename": "Login.yml"
+        },
+        "request": {
+          "method": "POST",
+          "url": "http://127.0.0.1:5100/auth/login",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "data": "{\n  \"email\": \"nova@gmail.com\",\n  \"password\": \"nova@2025\"\n}"
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Thu, 28 May 2026 16:36:31 GMT, Thu, 28 May 2026 16:36:31 GMT",
+            "server": "uvicorn",
+            "content-type": "application/json",
+            "x-request-id": "6dd07723-fe7a-495d-8659-a4ff2a577f8f",
+            "x-trace-id": "42983b6e-2a87-4734-accd-ae71333805be",
+            "content-length": "558"
+          },
+          "data": {
+            "message": "Login successful",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6Im5vdmFAZ21haWwuY29tIiwiZXhwIjoxNzgyNTc4MTkyfQ.vGvjzrulymYyplGPlBM0kxpnaruGRfsp5Zxta_xMa8w",
+            "user": {
+              "id": 1,
+              "email": "nova@gmail.com",
+              "first_name": "Test",
+              "last_name": "Developer",
+              "created_at": "2026-05-25T06:41:36.225374",
+              "last_login": "2026-05-28T16:36:32.755907",
+              "is_active": true,
+              "status": "approved",
+              "approved_by": null,
+              "approved_by_id": null,
+              "approved_at": null,
+              "mfa_enabled": false,
+              "is_account_verified": true,
+              "role_name": null
+            },
+            "mfaRequired": null,
+            "email": null
+          },
+          "url": "http://127.0.0.1/auth/login",
+          "responseTime": 522,
+          "duration": 522,
+          "size": 558
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.7812571,
+        "name": "Login",
+        "path": "Login.yml",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "upload staging.yml"
+        },
+        "request": {
+          "method": "POST",
+          "url": "http://127.0.0.1:5100/geo/upload/staging/testing",
+          "headers": {
+            "Authorization": "Bearer ********",
+            "content-type": "multipart/form-data; boundary=--------------------------37d21e0f664d8d9f9db066ff"
+          },
+          "data": {
+            "_overheadLength": 152,
+            "_valueLength": 0,
+            "_valuesToMeasure": [
+              {
+                "fd": null,
+                "path": "C:\\Novacast Systems\\NFS_6.5r4_demo\\3DFiles\\3DFiles\\CAVITY.stl",
+                "flags": "r",
+                "mode": 438,
+                "end": null,
+                "bytesRead": 19084,
+                "_events": {},
+                "_readableState": {
+                  "highWaterMark": 65536,
+                  "buffer": [],
+                  "bufferIndex": 0,
+                  "length": 0,
+                  "pipes": [],
+                  "awaitDrainWriters": null
+                },
+                "_eventsCount": 2
+              }
+            ],
+            "writable": false,
+            "readable": true,
+            "dataSize": 0,
+            "maxDataSize": 2097152,
+            "pauseStreams": true,
+            "_released": true,
+            "_streams": [],
+            "_currentStream": null,
+            "_insideLoop": false,
+            "_pendingNext": false,
+            "_boundary": "--------------------------37d21e0f664d8d9f9db066ff",
+            "_events": {},
+            "_eventsCount": 3
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Thu, 28 May 2026 16:36:32 GMT, Thu, 28 May 2026 16:36:33 GMT",
+            "server": "uvicorn",
+            "content-type": "application/json",
+            "x-request-id": "ec7556bc-39ce-4a1c-9518-d6f1738cb2dc",
+            "x-trace-id": "4ab726d5-48e9-49e6-93e4-09653e6084f8",
+            "content-length": "104"
+          },
+          "data": {
+            "success": true,
+            "message": "Files uploaded to staging successfully",
+            "files": [
+              "cavity.stl"
+            ],
+            "warnings": []
+          },
+          "url": "http://127.0.0.1/geo/upload/staging/testing",
+          "responseTime": 335,
+          "duration": 335,
+          "size": 104
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.3395425,
+        "name": "upload staging",
+        "path": "upload staging.yml",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "upload geo.yml"
+        },
+        "request": {
+          "method": "POST",
+          "url": "http://127.0.0.1:5100/geo/upload/geometry/testing",
+          "headers": {
+            "Authorization": "Bearer ********",
+            "content-type": "multipart/form-data; boundary=--------------------------116d6e2b7f57b522ccb0feb0"
+          },
+          "data": {
+            "_overheadLength": 152,
+            "_valueLength": 0,
+            "_valuesToMeasure": [
+              {
+                "fd": null,
+                "path": "C:\\Novacast Systems\\NFS_6.5r4_demo\\3DFiles\\3DFiles\\CAVITY.stl",
+                "flags": "r",
+                "mode": 438,
+                "end": null,
+                "bytesRead": 19084,
+                "_events": {},
+                "_readableState": {
+                  "highWaterMark": 65536,
+                  "buffer": [],
+                  "bufferIndex": 0,
+                  "length": 0,
+                  "pipes": [],
+                  "awaitDrainWriters": null
+                },
+                "_eventsCount": 2
+              }
+            ],
+            "writable": false,
+            "readable": true,
+            "dataSize": 0,
+            "maxDataSize": 2097152,
+            "pauseStreams": true,
+            "_released": true,
+            "_streams": [],
+            "_currentStream": null,
+            "_insideLoop": false,
+            "_pendingNext": false,
+            "_boundary": "--------------------------116d6e2b7f57b522ccb0feb0",
+            "_events": {},
+            "_eventsCount": 3
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Thu, 28 May 2026 16:36:32 GMT, Thu, 28 May 2026 16:36:33 GMT",
+            "server": "uvicorn",
+            "content-type": "application/json",
+            "x-request-id": "66cda685-ea45-4a9e-9b02-433ff5e780a2",
+            "x-trace-id": "f2b0b7a1-8ac7-4fee-bfe3-21a8ab113756",
+            "content-length": "31"
+          },
+          "data": {
+            "message": "Operation success"
+          },
+          "url": "http://127.0.0.1/geo/upload/geometry/testing",
+          "responseTime": 186,
+          "duration": 186,
+          "size": 31
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.1891108,
+        "name": "upload geo",
+        "path": "upload geo.yml",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "check watertight.yml"
+        },
+        "request": {
+          "method": "GET",
+          "url": "http://127.0.0.1:5100/geo/check-watertight/testing/cavity.stl",
+          "headers": {
+            "Authorization": "Bearer ********",
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Thu, 28 May 2026 16:36:32 GMT, Thu, 28 May 2026 16:36:33 GMT",
+            "server": "uvicorn",
+            "content-type": "application/json",
+            "x-request-id": "c31ba60e-2ff4-4010-ad9a-d918fa5c556e",
+            "x-trace-id": "5e9240b5-9399-4b5a-b7d3-9e0f8b7a3d53",
+            "content-length": "302"
+          },
+          "data": {
+            "success": true,
+            "case_name": "testing",
+            "filename": "cavity.stl",
+            "watertight_info": {
+              "is_watertight": true,
+              "vertex_count": 192,
+              "face_count": 380,
+              "volume": null,
+              "surface_area": null,
+              "mesh_status": "watertight",
+              "boundary_edges_count": 0,
+              "non_manifold_edges_count": 0,
+              "holes_count": 0,
+              "is_manifold": true,
+              "error": null
+            }
+          },
+          "url": "http://127.0.0.1/geo/check-watertight/testing/cavity.stl",
+          "responseTime": 139,
+          "duration": 139,
+          "size": 302
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.1408587,
+        "name": "check watertight",
+        "path": "check watertight.yml",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "analyze dimensions.yml"
+        },
+        "request": {
+          "method": "GET",
+          "url": "http://127.0.0.1:5100/geo/analyze-dimensions/testing/cavity.stl",
+          "headers": {
+            "Authorization": "Bearer ********",
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Thu, 28 May 2026 16:36:32 GMT, Thu, 28 May 2026 16:36:33 GMT",
+            "server": "uvicorn",
+            "content-type": "application/json",
+            "x-request-id": "ec06a8cd-8a8a-4cd6-b628-7a6dd1059b14",
+            "x-trace-id": "c05673d4-02df-49db-82df-7567893e8618",
+            "content-length": "366"
+          },
+          "data": {
+            "success": true,
+            "case_name": "testing",
+            "filename": "cavity.stl",
+            "file_location": "geometries",
+            "dimensions": {
+              "width": 66,
+              "height": 20,
+              "depth": 25.56999969482422,
+              "max_dimension": 66,
+              "unit": "cm"
+            },
+            "bounding_box": {
+              "min": {
+                "x": -20,
+                "y": -10,
+                "z": 0
+              },
+              "max": {
+                "x": 46,
+                "y": 10,
+                "z": 25.56999969482422
+              }
+            },
+            "mesh_info": {
+              "triangle_count": 380,
+              "vertex_count": 1140,
+              "file_size": 19084
+            }
+          },
+          "url": "http://127.0.0.1/geo/analyze-dimensions/testing/cavity.stl",
+          "responseTime": 31,
+          "duration": 31,
+          "size": 366
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.0328603,
+        "name": "analyze dimensions",
+        "path": "analyze dimensions.yml",
+        "iterationIndex": 0
+      }
+    ],
+    "summary": {
+      "totalRequests": 5,
+      "passedRequests": 5,
+      "failedRequests": 0,
+      "errorRequests": 0,
+      "skippedRequests": 0,
+      "totalAssertions": 0,
+      "passedAssertions": 0,
+      "failedAssertions": 0,
+      "totalTests": 0,
+      "passedTests": 0,
+      "failedTests": 0,
+      "totalPreRequestTests": 0,
+      "passedPreRequestTests": 0,
+      "failedPreRequestTests": 0,
+      "totalPostResponseTests": 0,
+      "passedPostResponseTests": 0,
+      "failedPostResponseTests": 0
+    }
+  }
+]
