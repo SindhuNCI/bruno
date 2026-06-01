@@ -1,7 +1,7 @@
 opencollection: 1.0.0
 
 info:
-  name: Unit testing
+  name: Login
 config:
   proxy:
     inherit: true

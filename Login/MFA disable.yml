@@ -1,0 +1,20 @@
+info:
+  name: MFA disable
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/auth/mfa/disable
+  body:
+    type: json
+    data: '{"password": "Test@1234"}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

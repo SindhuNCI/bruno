@@ -1,0 +1,17 @@
+info:
+  name: MFA enroll
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/auth/mfa/enroll
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

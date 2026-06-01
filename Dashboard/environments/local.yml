@@ -1,0 +1,6 @@
+name: local
+variables:
+  - name: token
+    value: ""
+  - name: project_id
+    value: ""

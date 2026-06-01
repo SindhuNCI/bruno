@@ -1,0 +1,20 @@
+info:
+  name: Verify enrollment
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: http://127.0.0.1:5100/auth/mfa/verify-enrollment
+  body:
+    type: json
+    data: '{"code": "<totp_code>"}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
